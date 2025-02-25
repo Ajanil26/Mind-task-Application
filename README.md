@@ -1,5 +1,4 @@
 # Mind-task-Application
-# Task Management Application
 
 ## Overview
 The **Task Management Application** is a web-based tool designed to help users efficiently create, manage, and track their tasks. It allows users to organize their daily activities, set deadlines, prioritize tasks, and collaborate with team members.
@@ -17,10 +16,8 @@ The **Task Management Application** is a web-based tool designed to help users e
 ## Installation
 ### Prerequisites
 Ensure you have the following installed:
-- Python 3.x
-- Django
-- SQLite / MySQL
-- Node.js & npm (for frontend if applicable)
+- Node.js & npm
+- MongoDB
 
 ### Steps
 1. Clone the repository:
@@ -28,21 +25,38 @@ Ensure you have the following installed:
    git clone https://github.com/yourusername/task-management-app.git
    cd task-management-app
    ```
-2. Install dependencies:
+2. Navigate to the `backend` directory:
    ```sh
-   pip install -r requirements.txt
+   cd backend
    ```
-3. Set up the database:
+3. Install backend dependencies:
    ```sh
-   python manage.py migrate
+   npm install
    ```
-4. Run the development server:
+4. Set up environment variables in a `.env` file (example variables):
    ```sh
-   python manage.py runserver
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
    ```
-5. Open the application in your browser:
+5. Start the backend server:
+   ```sh
+   npm run dev
    ```
-   http://127.0.0.1:8000
+6. Navigate to the `frontend` directory:
+   ```sh
+   cd ../frontend
+   ```
+7. Install frontend dependencies:
+   ```sh
+   npm install
+   ```
+8. Start the React frontend:
+   ```sh
+   npm start
+   ```
+9. Open the application in your browser:
+   ```
+   http://localhost:3000
    ```
 
 ## Usage
@@ -53,10 +67,10 @@ Ensure you have the following installed:
 5. **View Reports**: Monitor productivity through dashboards.
 
 ## Technologies Used
-- **Backend**: Django (Python)
-- **Frontend**: HTML, CSS, JavaScript (React or Vue.js optional)
-- **Database**: SQLite / MySQL
-- **Authentication**: Django Authentication
+- **Backend**: Node.js, Express.js
+- **Frontend**: React (JavaScript)
+- **Database**: MongoDB
+- **Authentication**: JWT Authentication
 
 ## Contributing
 1. Fork the repository.
@@ -79,4 +93,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 For any questions or issues, contact **your-email@example.com** or create an issue on GitHub.
+
+
 
